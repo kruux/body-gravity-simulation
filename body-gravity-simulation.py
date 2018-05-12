@@ -167,9 +167,19 @@ def main():
 
     fig = plt.figure()
     ax = p3.Axes3D(fig)
-    ax.set_xlabel("X")
-    ax.set_ylabel("Y")
-    ax.set_zlabel("Z")
+    ax.set_xlabel("Meters [m]")
+    ax.set_ylabel("Meters [m]")
+    ax.set_zlabel("Meters [m]")
+    ax.set_facecolor('black')
+    ax.xaxis.label.set_color('white')
+    ax.yaxis.label.set_color('white')
+    ax.zaxis.label.set_color('white')
+    ax.tick_params(axis='x', colors='white')
+    ax.tick_params(axis='y', colors='white')
+    ax.tick_params(axis='z', colors='white')
+    ax.w_xaxis.set_pane_color((0, 0, 0, 1))
+    ax.w_yaxis.set_pane_color((0, 0, 0, 1))
+    ax.w_zaxis.set_pane_color((0, 0, 0, 1))
 
     # Plot all bodies from the simulation
     for body in bodies:
